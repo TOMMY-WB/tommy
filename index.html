@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="manifest" href="manifest.json">
+
+  <title>Foto Tommy</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+    }
+
+    img {
+      max-width: 95vw;
+      max-height: 95vh;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      object-fit: contain;
+    }
+
+    .error {
+      color: #666;
+      text-align: center;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <img id="foto" src="fototmy123.jpg" alt="Foto Tommy" onerror="tampilkanPesan()">
+
+  <script>
+    function tampilkanPesan() {
+      document.body.innerHTML = '<div class="error">⚠️ Gambar tidak ditemukan.<br>Pastikan file <b>fototmy123.jpg</b> ada di folder yang sama dengan <b>index.html</b>.</div>';
+    }
+  </script>
+</body>
+</html>
